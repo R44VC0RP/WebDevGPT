@@ -5,8 +5,6 @@ import time
 import functions
 import json
 
-
-
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", filename="weddevgpt.log")
 
 client = OpenAI()
@@ -66,6 +64,7 @@ def process_run_object(run_object):
             threadMessage(codingThreadID, message)
             askCodingAI(codingThreadID)
             message = client.beta.threads.messages.list(thread_id=codingThreadID)
+            print(message.data.content)
             return message
 
 

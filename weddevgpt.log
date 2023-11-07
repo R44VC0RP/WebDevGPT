@@ -38,3 +38,86 @@
 2023-11-06 22:49:08,820 INFO Received completed response from CodingAI
 2023-11-06 22:49:08,820 INFO CodingAI response received
 2023-11-06 22:49:09,011 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_F6OAlWS7w6zzjBCnzapKgATN/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:03,939 INFO Initializing Thread
+2023-11-07 09:13:04,327 INFO HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2023-11-07 09:13:04,330 INFO CodingAI Thread Initialized with ID: thread_4ztnJDf2vZcsHd2ABERamoWx
+2023-11-07 09:13:04,330 INFO Initializing Thread
+2023-11-07 09:13:04,411 INFO HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2023-11-07 09:13:04,412 INFO PromptAI Thread Initialized with ID: thread_nXdulOgeFj1lqHu1TIHdJrlC
+2023-11-07 09:13:04,412 INFO Starting main function
+2023-11-07 09:13:04,412 INFO Sending message to thread
+2023-11-07 09:13:04,591 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_nXdulOgeFj1lqHu1TIHdJrlC/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:04,595 INFO Message sent to thread
+2023-11-07 09:13:04,595 INFO Asking PromptAI for a response
+2023-11-07 09:13:04,894 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_nXdulOgeFj1lqHu1TIHdJrlC/runs "HTTP/1.1 200 OK"
+2023-11-07 09:13:04,895 INFO PromptAI response status: queued
+2023-11-07 09:13:06,055 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_nXdulOgeFj1lqHu1TIHdJrlC/runs/run_8yKVT6JPd9zXCuzXMt3U9DBA "HTTP/1.1 200 OK"
+2023-11-07 09:13:06,059 INFO PromptAI response status: in_progress
+2023-11-07 09:13:07,161 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_nXdulOgeFj1lqHu1TIHdJrlC/runs/run_8yKVT6JPd9zXCuzXMt3U9DBA "HTTP/1.1 200 OK"
+2023-11-07 09:13:07,164 INFO PromptAI response status: requires_action
+2023-11-07 09:13:07,164 INFO PromptAI response requires action
+2023-11-07 09:13:07,164 INFO Sending message to thread
+2023-11-07 09:13:07,317 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:07,318 INFO Message sent to thread
+2023-11-07 09:13:07,318 INFO Asking CodingAI for a response
+2023-11-07 09:13:07,711 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs "HTTP/1.1 200 OK"
+2023-11-07 09:13:07,714 INFO CodingAI response status: queued
+2023-11-07 09:13:08,912 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:08,917 INFO CodingAI response status: in_progress
+2023-11-07 09:13:10,013 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:10,014 INFO CodingAI response status: in_progress
+2023-11-07 09:13:11,118 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:11,124 INFO CodingAI response status: requires_action
+2023-11-07 09:13:11,124 INFO CodingAI response requires action
+2023-11-07 09:13:11,405 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW/submit_tool_outputs "HTTP/1.1 200 OK"
+2023-11-07 09:13:11,409 INFO CodingAI response action submitted
+2023-11-07 09:13:12,508 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:12,512 INFO CodingAI response status: in_progress
+2023-11-07 09:13:13,610 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:13,612 INFO CodingAI response status: in_progress
+2023-11-07 09:13:14,735 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/runs/run_gNnelfojT5aZQ1jpWcoTnuIW "HTTP/1.1 200 OK"
+2023-11-07 09:13:14,739 INFO CodingAI response status: completed
+2023-11-07 09:13:14,739 INFO Received completed response from CodingAI
+2023-11-07 09:13:14,739 INFO CodingAI response received
+2023-11-07 09:13:14,896 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_4ztnJDf2vZcsHd2ABERamoWx/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:15,064 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_nXdulOgeFj1lqHu1TIHdJrlC/runs/run_8yKVT6JPd9zXCuzXMt3U9DBA/submit_tool_outputs "HTTP/1.1 400 Bad Request"
+2023-11-07 09:13:50,800 INFO Initializing Thread
+2023-11-07 09:13:51,007 INFO HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2023-11-07 09:13:51,008 INFO CodingAI Thread Initialized with ID: thread_2z0595zz1duo5j2vmNARA93k
+2023-11-07 09:13:51,008 INFO Initializing Thread
+2023-11-07 09:13:51,106 INFO HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2023-11-07 09:13:51,107 INFO PromptAI Thread Initialized with ID: thread_LHGU2ziJGUnAODeJc60hvVax
+2023-11-07 09:13:51,107 INFO Starting main function
+2023-11-07 09:13:51,107 INFO Sending message to thread
+2023-11-07 09:13:51,286 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_LHGU2ziJGUnAODeJc60hvVax/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:51,291 INFO Message sent to thread
+2023-11-07 09:13:51,291 INFO Asking PromptAI for a response
+2023-11-07 09:13:51,637 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_LHGU2ziJGUnAODeJc60hvVax/runs "HTTP/1.1 200 OK"
+2023-11-07 09:13:51,641 INFO PromptAI response status: queued
+2023-11-07 09:13:52,815 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_LHGU2ziJGUnAODeJc60hvVax/runs/run_46Oy3hOzCGK99qQ6dWy69udI "HTTP/1.1 200 OK"
+2023-11-07 09:13:52,819 INFO PromptAI response status: in_progress
+2023-11-07 09:13:54,028 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_LHGU2ziJGUnAODeJc60hvVax/runs/run_46Oy3hOzCGK99qQ6dWy69udI "HTTP/1.1 200 OK"
+2023-11-07 09:13:54,033 INFO PromptAI response status: requires_action
+2023-11-07 09:13:54,033 INFO PromptAI response requires action
+2023-11-07 09:13:54,033 INFO Sending message to thread
+2023-11-07 09:13:54,201 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/messages "HTTP/1.1 200 OK"
+2023-11-07 09:13:54,205 INFO Message sent to thread
+2023-11-07 09:13:54,205 INFO Asking CodingAI for a response
+2023-11-07 09:13:54,564 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs "HTTP/1.1 200 OK"
+2023-11-07 09:13:54,566 INFO CodingAI response status: queued
+2023-11-07 09:13:55,782 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc "HTTP/1.1 200 OK"
+2023-11-07 09:13:55,784 INFO CodingAI response status: in_progress
+2023-11-07 09:13:56,889 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc "HTTP/1.1 200 OK"
+2023-11-07 09:13:56,893 INFO CodingAI response status: requires_action
+2023-11-07 09:13:56,893 INFO CodingAI response requires action
+2023-11-07 09:13:57,195 INFO HTTP Request: POST https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc/submit_tool_outputs "HTTP/1.1 200 OK"
+2023-11-07 09:13:57,199 INFO CodingAI response action submitted
+2023-11-07 09:13:58,309 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc "HTTP/1.1 200 OK"
+2023-11-07 09:13:58,313 INFO CodingAI response status: in_progress
+2023-11-07 09:13:59,423 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc "HTTP/1.1 200 OK"
+2023-11-07 09:13:59,426 INFO CodingAI response status: in_progress
+2023-11-07 09:14:00,542 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/runs/run_V7EO0H7mNve7Fj0MUH9r9Aoc "HTTP/1.1 200 OK"
+2023-11-07 09:14:00,548 INFO CodingAI response status: completed
+2023-11-07 09:14:00,548 INFO Received completed response from CodingAI
+2023-11-07 09:14:00,548 INFO CodingAI response received
+2023-11-07 09:14:00,716 INFO HTTP Request: GET https://api.openai.com/v1/threads/thread_2z0595zz1duo5j2vmNARA93k/messages "HTTP/1.1 200 OK"
