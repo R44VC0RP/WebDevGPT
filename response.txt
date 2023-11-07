@@ -1,0 +1,60 @@
+Run(
+    id='run_FhPhljT18vLgqnovtPZgGwsq',
+    assistant_id='asst_t3a8MbsZz46X69KCyBLlh0pl',
+    cancelled_at=None,
+    completed_at=None,
+    created_at=1699325131,
+    expires_at=1699325731,
+    failed_at=None,
+    file_ids=[],
+    instructions=None,
+    last_error=None,
+    metadata={},
+    model='gpt-4',
+    object='thread.run',
+    required_action=RequiredAction(
+        submit_tool_outputs=RequiredActionSubmitToolOutputs(
+            tool_calls=[
+                RequiredActionFunctionToolCall(
+                    id='call_oexq29pV1pgL8fUbp2fcRJH8',
+                    function=Function(
+                        arguments='{\n  "html_code": "<!DOCTYPE html>\\n<html>\\n<head>\\n<title>Super Simple Website</title>\\n<link rel=\'stylesheet\' type=\'text/css\' href=\'style.css\'>\\n</head>\\n<body>\\n<h1>Hello World!</h1>\\n<p>This is a simple paragraph!</p>\\n<button>Click Me!</button>\\n<script src=\'script.js\'></script>\\n</body>\\n</html>",\n  "css_code": "body {\\nfont-family: Arial, sans-serif;\\nbackground-color: #f0f0f0;\\n}\\nh1 {\\ncolor: #333;\\ntext-align: center;\\n}\\np {\\nfont-size: 16px;\\ntext-align: center;\\n}\\nbutton {\\ndisplay: block;\\nwidth: 200px;\\nheight: 50px;\\nmargin: 20px auto;\\nbackground-color: #ff6347;\\ncolor: white;\\nborder: none;\\nborder-radius: 5px;\\ncursor: pointer;\\nfont-size: 18px;\\n}",\n  "js_code": "document.querySelector(\'button\').addEventListener(\'click\', function() {\\nalert(\'Button Clicked!\');\\n});"\n}',
+                        name='create_website'
+                    ),
+                    type='function'
+                )
+            ]
+        ),
+        type='submit_tool_outputs'
+    ),
+    started_at=1699325131,
+    status='requires_action',
+    thread_id='thread_9dMNWUQBtYz1W8pSFPsiX5tU',
+    tools=[
+        ToolAssistantToolsFunction(
+            function=ToolAssistantToolsFunctionFunction(
+                description='Create a index.html, style.css and script.js (script.js is not required)',
+                name='create_website',
+                parameters={
+                    'type': 'object',
+                    'properties': {
+                        'html_code': {
+                            'type': 'string',
+                            'description': 'The HTML code for the webpage.'
+                        },
+                        'css_code': {
+                            'type': 'string',
+                            'description': 'The CSS code for the webpage'
+                        },
+                        'js_code': {
+                            'type': 'string',
+                            'description': 'The Javascript for the webpage'
+                        }
+                    },
+                    'required': ['html_code', 'css_code']
+                },
+                type='function'
+            )
+        )
+    ]
+)
