@@ -1,1 +1,3 @@
 openai
+selenium
+webdriver_manager
