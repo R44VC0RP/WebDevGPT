@@ -1,3 +1,4 @@
 webdevgpt/
 __pycache__/
 venv/
+keys.env

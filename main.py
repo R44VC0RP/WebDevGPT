@@ -20,12 +20,12 @@ client = openai.OpenAI()
 
 # Set up OpenAI API - assistant IDs
 coding_ai_id_35 = "asst_OO9fuCFGsDtmPhEWJ0Ihz7Zy"
-prompt_at_id_35 = "asst_B6yomAvgVF4dbtxJhYXp9Ok6"
+prompt_ai_id_35 = "asst_B6yomAvgVF4dbtxJhYXp9Ok6"
 
 prompt_ai_id_4 = "asst_iEBeGcs4FNywyhkdk8SJKiIP"
 coding_ai_id_4 = "asst_0vmT1XOEp7PV3s8theanh3PZ"
 
-prompt_ai = prompt_at_id_35
+prompt_ai = prompt_ai_id_35
 coding_ai = coding_ai_id_35
 
 def threadInit(function):
@@ -182,20 +182,26 @@ def askPromptAI(threadID):
 def threadObjectTestRetrevial(threadID):
     logger.info("Retrieving thread object")
     threadObject = client.beta.threads.messages.list(threadID)
-    print("Thread Object: " + str(threadObject.data[0].content[0].text.value))
+    n = 0
+    print(threadObject.data)
+    for item in threadObject.data:
+        #print("Thread Object nth: {}: ".format(n) + str(item))
+        n += 1
+    #print("Thread Object: " + str(threadObject.data[0].content[0].text.value))
     
     logger.info("Thread object retrieved")
     return threadObject
+
+
 
 def main():
     logger.info("Starting main function")
     print("Welcome to WedDevGPT!")
 
-    #threadObjectTestRetrevial("thread_cBbmbQZPfIXHlE60Kj8DMNc2")
-
-    # userPrompt = "Create a website for Ryan Vogel that is modern with white bold text and a darker background color." #input("What would you like the website to look like? ")
-    # threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
-    # askPromptAI(promptThreadID)
+    userPrompt = "Create a website for Ryan Vogel that is modern with white bold text and a darker background color." #input("What would you like the website to look like? ")
+    threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
+    askPromptAI(promptThreadID)
+    functions.webpageImageRender()
     
     
     

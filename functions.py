@@ -2,6 +2,8 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import base64
+import time
 
 
 
@@ -41,16 +43,35 @@ def webpageImageRender():
     # Initialize the browser
     browser = webdriver.Chrome(service=service, options=options)
 
-    # Open your local HTML file
-    browser.get("file://website/index.html")
+    # Open your local HTML file. relative to the directory you're running this script from. websites/index.html
+    path = os.path.abspath("website/index.html")
+    url = 'file://' + path
+    browser.get(url)
 
     # Give the page some time to render JavaScript, if needed
-    browser.implicitly_wait(2)  # waits for 10 seconds
+    time.sleep(2)  # waits for 2 seconds
 
-    # Take a screenshot
+    # Calculate the total height of the webpage
+    total_height = browser.execute_script("return document.body.parentNode.scrollHeight")
+
+    # Scroll to the end of the webpage to ensure all lazy-loaded elements are loaded
+    browser.execute_script("window.scrollTo(0, document.body.parentNode.scrollHeight)")
+
+    # Give the page some time to load any lazy-loaded elements
+    time.sleep(2)  # waits for 2 seconds
+
+    # Change the size of the window to the full height of the page
+    browser.set_window_size(1200, total_height)  # Width is set to 1200px, or whatever is required
+
+    # Take a screenshot of the entire page
     browser.save_screenshot('websiteSaved.png')
 
     # Close the browser
     browser.quit()
 
-    return "Image saved successfully!, file is, (websiteSaved.png) "
+    return "Image saved successfully! File is 'websiteSaved.png'."
+
+def convertImageFileToBase64String():
+    with open("websiteSaved.png", "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+        return encoded_string
