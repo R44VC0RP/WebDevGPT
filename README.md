@@ -19,12 +19,23 @@ The development process follows a structured workflow:
 7. **User Review**: Once satisfactory, the rendered website image is presented to the user for critique.
 8. **Finalization**: If the user has no further critiques, the website is finalized and deployed.
 
-![Detailed Python Website Development Workflow](https://imgr.whimsical.com/thumbnails/X1iPfzEe7M53aTg8TgXapJ/L844PY5DWTUTGM6JmAh6oc)
+<img width="400" src="https://imgr.whimsical.com/thumbnails/X1iPfzEe7M53aTg8TgXapJ/L844PY5DWTUTGM6JmAh6oc">
 
 ## Technologies
 
 - **OpenAI GPT-4-vision API**: Used by CoderAI for interpreting visual design elements and generating corresponding HTML/CSS.
 - **OpenAI GPT-4 Assistants API**: Utilized by PromptAI for processing natural language inputs and generating detailed development instructions.
+
+## Use Example:
+
+<img width="1224" alt="Screenshot 2023-11-09 at 12 56 17 PM" src="https://github.com/R44VC0RP/WebDevGPT/assets/89211796/5d64df2b-9ec6-4a3e-9da4-4bdf6ee7f29c">
+
+This was a non-altered fully functioning test run. Here is the website that it generated:
+
+<img width="1224" alt="Screenshot 2023-11-09 at 12 56 17 PM" src="https://github.com/R44VC0RP/WebDevGPT/assets/89211796/3f0be013-16c5-4251-9917-f5c8b73765fa">
+
+### Thoughts:
+Overall, it works, but I still need to optimize it and make it more reliable. It also uses a decent amount of tokens. This can be fixed with prompt optemizaiton and token counting.
 
 ## Getting Started
 
@@ -37,5 +48,6 @@ To get started with `WebDevGPT`, please follow the instructions below:
 5. Follow the on-screen instructions to guide you through the development process.
 
 ## Contribution
+![websiteSaved](https://github.com/R44VC0RP/WebDevGPT/assets/89211796/5aa32859-4aab-4a5c-bd23-5907275dbf95)
 
 Contributions to `WebDevGPT` are welcome. Please read
