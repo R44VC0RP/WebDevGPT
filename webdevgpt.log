@@ -1456,3 +1456,255 @@ Please note that the actual text and images will need to be replaced with the re
 
 The created website is a draft version with placeholder content, which will be replaced by actual text and images upon availability. Your feedback is welcome to finalize the design and content to meet your complete satisfaction. Please review and let us know any adjustments or additional features you'd like to implement.
 2023-11-08 14:51:25,281 INFO Main function completed
+2023-11-08 21:38:31,806 INFO Initializing Thread
+2023-11-08 21:38:32,106 INFO CodingAI Thread Initialized with ID: thread_TeUwzT2Rr7XFKYwKViWqVC5G
+2023-11-08 21:38:32,106 INFO Initializing Thread
+2023-11-08 21:38:32,223 INFO PromptAI Thread Initialized with ID: thread_ybUSqewO4cNtn3qImCDd1TGH
+2023-11-08 21:38:32,391 INFO Message: Hello sent to thread thread_ybUSqewO4cNtn3qImCDd1TGH
+2023-11-08 21:38:32,391 INFO Asking PromptAI for a response
+2023-11-08 21:38:32,695 INFO PromptAI response status: queued
+2023-11-08 21:38:33,843 INFO PromptAI response status: in_progress
+2023-11-08 21:38:34,946 INFO PromptAI response status: completed
+2023-11-08 21:38:34,946 INFO Getting newest message from thread
+2023-11-08 21:38:35,097 INFO Newest message from thread retrieved
+2023-11-08 21:38:35,097 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have any web design requests or projects in mind, feel free to share the details with me, and I'll help bring your vision to life.
+2023-11-08 21:38:35,208 INFO Message: How are you? sent to thread thread_ybUSqewO4cNtn3qImCDd1TGH
+2023-11-08 21:38:35,208 INFO Asking PromptAI for a response
+2023-11-08 21:38:35,475 INFO PromptAI response status: queued
+2023-11-08 21:38:36,634 INFO PromptAI response status: in_progress
+2023-11-08 21:38:37,726 INFO PromptAI response status: completed
+2023-11-08 21:38:37,726 INFO Getting newest message from thread
+2023-11-08 21:38:37,844 INFO Newest message from thread retrieved
+2023-11-08 21:38:37,844 INFO Received completed response from CodingAI | >>> I'm an AI assistant, so I don't have feelings, but I'm functioning optimally and ready to assist you! How can I help you with your project today? If you have any web design or development needs, let me know, and I can guide you through the process.
+2023-11-08 21:38:37,844 INFO Retrieving thread object
+2023-11-08 21:38:37,953 INFO Thread object retrieved
+2023-11-08 21:39:01,889 INFO Initializing Thread
+2023-11-08 21:39:02,085 INFO CodingAI Thread Initialized with ID: thread_5qzcwjIMGq1ZMv16ChsEtsP8
+2023-11-08 21:39:02,085 INFO Initializing Thread
+2023-11-08 21:39:02,176 INFO PromptAI Thread Initialized with ID: thread_MyAfEQrhF8bykWwXserpsVXf
+2023-11-08 21:39:02,344 INFO Message: Hello sent to thread thread_MyAfEQrhF8bykWwXserpsVXf
+2023-11-08 21:39:02,344 INFO Asking PromptAI for a response
+2023-11-08 21:39:02,673 INFO PromptAI response status: queued
+2023-11-08 21:39:03,841 INFO PromptAI response status: in_progress
+2023-11-08 21:39:04,944 INFO PromptAI response status: completed
+2023-11-08 21:39:04,944 INFO Getting newest message from thread
+2023-11-08 21:39:05,104 INFO Newest message from thread retrieved
+2023-11-08 21:39:05,104 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have a web design project or something else in mind, just let me know your requirements, and I'll help ensure they are carried out successfully.
+2023-11-08 21:39:05,223 INFO Message: How are you? sent to thread thread_MyAfEQrhF8bykWwXserpsVXf
+2023-11-08 21:39:05,223 INFO Asking PromptAI for a response
+2023-11-08 21:39:05,511 INFO PromptAI response status: queued
+2023-11-08 21:39:06,669 INFO PromptAI response status: in_progress
+2023-11-08 21:39:07,775 INFO PromptAI response status: completed
+2023-11-08 21:39:07,775 INFO Getting newest message from thread
+2023-11-08 21:39:07,872 INFO Newest message from thread retrieved
+2023-11-08 21:39:07,872 INFO Received completed response from CodingAI | >>> Thank you for asking! While I don't have feelings, I'm here and fully operational, ready to assist with your projects or answer any questions you might have. How can I help you today?
+2023-11-08 21:39:07,872 INFO Retrieving thread object
+2023-11-08 21:39:07,979 INFO Thread object retrieved
+2023-11-08 21:39:41,523 INFO Initializing Thread
+2023-11-08 21:39:41,692 INFO CodingAI Thread Initialized with ID: thread_xjEdeNDEY2rE7WDMO6wmg32X
+2023-11-08 21:39:41,692 INFO Initializing Thread
+2023-11-08 21:39:41,783 INFO PromptAI Thread Initialized with ID: thread_oMlHEDb2etNvx6fvNWTUHuUt
+2023-11-08 21:39:41,953 INFO Message: Hello sent to thread thread_oMlHEDb2etNvx6fvNWTUHuUt
+2023-11-08 21:39:41,954 INFO Asking PromptAI for a response
+2023-11-08 21:39:42,302 INFO PromptAI response status: queued
+2023-11-08 21:39:43,460 INFO PromptAI response status: in_progress
+2023-11-08 21:39:44,564 INFO PromptAI response status: completed
+2023-11-08 21:39:44,564 INFO Getting newest message from thread
+2023-11-08 21:39:44,725 INFO Newest message from thread retrieved
+2023-11-08 21:39:44,725 INFO Received completed response from CodingAI | >>> Hi there! How can I assist you today? If you have any web design requests or need help with a project, feel free to share your requirements with me.
+2023-11-08 21:39:44,868 INFO Message: How are you? sent to thread thread_oMlHEDb2etNvx6fvNWTUHuUt
+2023-11-08 21:39:44,868 INFO Asking PromptAI for a response
+2023-11-08 21:39:45,178 INFO PromptAI response status: queued
+2023-11-08 21:39:46,341 INFO PromptAI response status: in_progress
+2023-11-08 21:39:47,463 INFO PromptAI response status: completed
+2023-11-08 21:39:47,463 INFO Getting newest message from thread
+2023-11-08 21:39:47,573 INFO Newest message from thread retrieved
+2023-11-08 21:39:47,574 INFO Received completed response from CodingAI | >>> I'm an AI, so I don't have feelings, but I'm functioning optimally and ready to help you with your queries or projects. How can I assist you today?
+2023-11-08 21:39:47,574 INFO Retrieving thread object
+2023-11-08 21:39:47,699 INFO Thread object retrieved
+2023-11-08 21:42:06,930 INFO Initializing Thread
+2023-11-08 21:42:07,143 INFO CodingAI Thread Initialized with ID: thread_ukcam4DHRJTfhMSlJ68KWxg1
+2023-11-08 21:42:07,143 INFO Initializing Thread
+2023-11-08 21:42:07,231 INFO PromptAI Thread Initialized with ID: thread_jj9EkpaUvt7uIUPqNOivctky
+2023-11-08 21:42:07,392 INFO Message: Hello sent to thread thread_jj9EkpaUvt7uIUPqNOivctky
+2023-11-08 21:42:07,393 INFO Asking PromptAI for a response
+2023-11-08 21:42:07,696 INFO PromptAI response status: queued
+2023-11-08 21:42:08,855 INFO PromptAI response status: in_progress
+2023-11-08 21:42:09,960 INFO PromptAI response status: completed
+2023-11-08 21:42:09,960 INFO Getting newest message from thread
+2023-11-08 21:42:10,127 INFO Newest message from thread retrieved
+2023-11-08 21:42:10,127 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today with your web design and development needs? If you have any specific requests or ideas for a website, feel free to share them, and I will help guide you through the process to create a detailed plan for your web project.
+2023-11-08 21:42:10,233 INFO Message: How are you? sent to thread thread_jj9EkpaUvt7uIUPqNOivctky
+2023-11-08 21:42:10,233 INFO Asking PromptAI for a response
+2023-11-08 21:42:10,492 INFO PromptAI response status: queued
+2023-11-08 21:42:11,664 INFO PromptAI response status: in_progress
+2023-11-08 21:42:12,759 INFO PromptAI response status: completed
+2023-11-08 21:42:12,759 INFO Getting newest message from thread
+2023-11-08 21:42:12,859 INFO Newest message from thread retrieved
+2023-11-08 21:42:12,859 INFO Received completed response from CodingAI | >>> I'm just a digital assistant, so I don't have feelings, but I'm here and ready to assist you! How can I help you with your web design or development project today? If you have any questions or requests, feel free to let me know.
+2023-11-08 21:42:12,859 INFO Retrieving thread object
+2023-11-08 21:42:12,957 INFO Thread object retrieved
+2023-11-08 21:43:14,496 INFO Initializing Thread
+2023-11-08 21:43:14,699 INFO CodingAI Thread Initialized with ID: thread_nuQeWuER6jXK8fWKtQqDFSH1
+2023-11-08 21:43:14,699 INFO Initializing Thread
+2023-11-08 21:43:14,787 INFO PromptAI Thread Initialized with ID: thread_f5jlD387XY3dkerh627J0h9u
+2023-11-08 21:43:14,961 INFO Message: Hello sent to thread thread_f5jlD387XY3dkerh627J0h9u
+2023-11-08 21:43:14,961 INFO Asking PromptAI for a response
+2023-11-08 21:43:15,233 INFO PromptAI response status: queued
+2023-11-08 21:43:16,401 INFO PromptAI response status: in_progress
+2023-11-08 21:43:17,504 INFO PromptAI response status: completed
+2023-11-08 21:43:17,504 INFO Getting newest message from thread
+2023-11-08 21:43:17,664 INFO Newest message from thread retrieved
+2023-11-08 21:43:17,665 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have any web design needs or project ideas you're looking to bring to life, feel free to tell me about them, and I'll help translate your vision into specific tasks for our development team.
+2023-11-08 21:43:17,779 INFO Message: How are you? sent to thread thread_f5jlD387XY3dkerh627J0h9u
+2023-11-08 21:43:17,779 INFO Asking PromptAI for a response
+2023-11-08 21:43:18,104 INFO PromptAI response status: queued
+2023-11-08 21:43:19,269 INFO PromptAI response status: in_progress
+2023-11-08 21:43:20,486 INFO PromptAI response status: in_progress
+2023-11-08 21:43:21,585 INFO PromptAI response status: completed
+2023-11-08 21:43:21,585 INFO Getting newest message from thread
+2023-11-08 21:43:21,702 INFO Newest message from thread retrieved
+2023-11-08 21:43:21,703 INFO Received completed response from CodingAI | >>> I'm just a digital assistant, so I don't have feelings, but I'm here and ready to assist you with any tasks or questions you have. How can I help you today? If you're looking to create or update a website, or have any other web-related project, just let me know your requirements, and I'll take care of the rest.
+2023-11-08 21:43:21,703 INFO Retrieving thread object
+2023-11-08 21:43:21,806 INFO Thread object retrieved
+2023-11-08 21:43:21,806 INFO Converting thread object to message list
+2023-11-08 21:43:21,908 INFO Thread object converted to message list
+2023-11-08 21:46:06,240 INFO Initializing Thread
+2023-11-08 21:46:06,494 INFO CodingAI Thread Initialized with ID: thread_y7tfuIkjVWomrz3eHC7uYMZW
+2023-11-08 21:46:06,494 INFO Initializing Thread
+2023-11-08 21:46:06,570 INFO PromptAI Thread Initialized with ID: thread_LYzr7JfCjeNF0ccLDvgYiepZ
+2023-11-08 21:46:06,727 INFO Message: Hello sent to thread thread_LYzr7JfCjeNF0ccLDvgYiepZ
+2023-11-08 21:46:06,727 INFO Asking PromptAI for a response
+2023-11-08 21:46:07,078 INFO PromptAI response status: queued
+2023-11-08 21:46:08,232 INFO PromptAI response status: in_progress
+2023-11-08 21:46:09,371 INFO PromptAI response status: completed
+2023-11-08 21:46:09,372 INFO Getting newest message from thread
+2023-11-08 21:46:09,524 INFO Newest message from thread retrieved
+2023-11-08 21:46:09,524 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have any web design requests or need guidance on a project, feel free to let me know, and I'll do my best to help you.
+2023-11-08 21:46:09,657 INFO Message: How are you? sent to thread thread_LYzr7JfCjeNF0ccLDvgYiepZ
+2023-11-08 21:46:09,657 INFO Asking PromptAI for a response
+2023-11-08 21:46:09,926 INFO PromptAI response status: queued
+2023-11-08 21:46:11,092 INFO PromptAI response status: in_progress
+2023-11-08 21:46:12,228 INFO PromptAI response status: completed
+2023-11-08 21:46:12,229 INFO Getting newest message from thread
+2023-11-08 21:46:12,325 INFO Newest message from thread retrieved
+2023-11-08 21:46:12,325 INFO Received completed response from CodingAI | >>> I'm just a digital assistant, so I don't have feelings, but I'm here and ready to assist you with any questions or tasks you might have. How can I help you today?
+2023-11-08 21:46:12,326 INFO Retrieving thread object
+2023-11-08 21:46:12,432 INFO Thread object retrieved
+2023-11-08 21:46:12,595 INFO Message: Give me a fun fact sent to thread thread_LYzr7JfCjeNF0ccLDvgYiepZ
+2023-11-08 21:46:12,596 INFO Converting thread object to message list
+2023-11-08 21:46:12,697 INFO Thread object converted to message list
+2023-11-08 21:46:26,517 INFO Initializing Thread
+2023-11-08 21:46:26,686 INFO CodingAI Thread Initialized with ID: thread_2OfsuI21zfChayaH112SvJiO
+2023-11-08 21:46:26,686 INFO Initializing Thread
+2023-11-08 21:46:26,784 INFO PromptAI Thread Initialized with ID: thread_6l9XzkNE7J8fw81sjQsVv9BQ
+2023-11-08 21:46:26,949 INFO Message: Hello sent to thread thread_6l9XzkNE7J8fw81sjQsVv9BQ
+2023-11-08 21:46:26,949 INFO Asking PromptAI for a response
+2023-11-08 21:46:27,267 INFO PromptAI response status: queued
+2023-11-08 21:46:28,404 INFO PromptAI response status: in_progress
+2023-11-08 21:46:29,505 INFO PromptAI response status: completed
+2023-11-08 21:46:29,506 INFO Getting newest message from thread
+2023-11-08 21:46:29,658 INFO Newest message from thread retrieved
+2023-11-08 21:46:29,659 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have any web design needs or require a project to be started, feel free to share your requirements and ideas with me. I'm here to help!
+2023-11-08 21:46:29,782 INFO Message: How are you? sent to thread thread_6l9XzkNE7J8fw81sjQsVv9BQ
+2023-11-08 21:46:29,782 INFO Asking PromptAI for a response
+2023-11-08 21:46:30,025 INFO PromptAI response status: queued
+2023-11-08 21:46:31,210 INFO PromptAI response status: in_progress
+2023-11-08 21:46:32,304 INFO PromptAI response status: completed
+2023-11-08 21:46:32,304 INFO Getting newest message from thread
+2023-11-08 21:46:32,409 INFO Newest message from thread retrieved
+2023-11-08 21:46:32,409 INFO Received completed response from CodingAI | >>> I'm just a digital assistant, so I don't have feelings, but thank you for asking! I'm here and ready to assist you with any tasks or questions you have. How can I help you today?
+2023-11-08 21:46:32,410 INFO Retrieving thread object
+2023-11-08 21:46:32,515 INFO Thread object retrieved
+2023-11-08 21:46:32,641 INFO Message: Give me a fun fact sent to thread thread_6l9XzkNE7J8fw81sjQsVv9BQ
+2023-11-08 21:46:32,641 INFO Converting thread object to message list
+2023-11-08 21:46:32,738 INFO Thread object converted to message list
+2023-11-08 21:46:39,423 INFO Initializing Thread
+2023-11-08 21:46:39,580 INFO CodingAI Thread Initialized with ID: thread_d8ug3T42p9VRmuFgFGffXgLL
+2023-11-08 21:46:39,580 INFO Initializing Thread
+2023-11-08 21:46:39,661 INFO PromptAI Thread Initialized with ID: thread_5Nvf6QqBgK96qolm5377tzIx
+2023-11-08 21:46:39,820 INFO Message: Hello sent to thread thread_5Nvf6QqBgK96qolm5377tzIx
+2023-11-08 21:46:39,820 INFO Asking PromptAI for a response
+2023-11-08 21:46:40,176 INFO PromptAI response status: queued
+2023-11-08 21:46:41,320 INFO PromptAI response status: in_progress
+2023-11-08 21:46:42,415 INFO PromptAI response status: completed
+2023-11-08 21:46:42,415 INFO Getting newest message from thread
+2023-11-08 21:46:42,555 INFO Newest message from thread retrieved
+2023-11-08 21:46:42,555 INFO Received completed response from CodingAI | >>> Hello! How can I assist you today? If you have any questions or need help with a web design project, feel free to let me know. I'm here to guide you through the process.
+2023-11-08 21:46:42,701 INFO Message: How are you? sent to thread thread_5Nvf6QqBgK96qolm5377tzIx
+2023-11-08 21:46:42,702 INFO Asking PromptAI for a response
+2023-11-08 21:46:42,978 INFO PromptAI response status: queued
+2023-11-08 21:46:44,131 INFO PromptAI response status: in_progress
+2023-11-08 21:46:45,229 INFO PromptAI response status: completed
+2023-11-08 21:46:45,229 INFO Getting newest message from thread
+2023-11-08 21:46:45,338 INFO Newest message from thread retrieved
+2023-11-08 21:46:45,339 INFO Received completed response from CodingAI | >>> I'm an AI, so I don't have feelings, but I'm ready and fully operational. Thank you for asking! How can I assist you with your project today?
+2023-11-08 21:46:45,339 INFO Retrieving thread object
+2023-11-08 21:46:45,438 INFO Thread object retrieved
+2023-11-08 21:46:45,543 INFO Message: Give me a fun fact sent to thread thread_5Nvf6QqBgK96qolm5377tzIx
+2023-11-08 21:46:45,544 INFO Converting thread object to message list
+2023-11-08 21:46:45,639 INFO Thread object converted to message list
+2023-11-08 21:47:46,529 INFO Initializing Thread
+2023-11-08 21:47:46,726 INFO CodingAI Thread Initialized with ID: thread_Kqf7uT7YnXkNO6sYnFmNsDSZ
+2023-11-08 21:47:46,726 INFO Initializing Thread
+2023-11-08 21:47:46,816 INFO PromptAI Thread Initialized with ID: thread_Bm9b2i88qItcFvP6QjghNYi8
+2023-11-08 21:47:46,985 INFO Message: Hello sent to thread thread_Bm9b2i88qItcFvP6QjghNYi8
+2023-11-08 21:47:46,985 INFO Asking PromptAI for a response
+2023-11-08 21:47:47,294 INFO PromptAI response status: queued
+2023-11-08 21:47:48,459 INFO PromptAI response status: completed
+2023-11-08 21:47:48,459 INFO Getting newest message from thread
+2023-11-08 21:47:48,617 INFO Newest message from thread retrieved
+2023-11-08 21:47:48,617 INFO Received completed response from CodingAI | >>> Hi there! How can I assist you with your project today?
+2023-11-08 21:47:48,730 INFO Message: How are you? sent to thread thread_Bm9b2i88qItcFvP6QjghNYi8
+2023-11-08 21:47:48,730 INFO Asking PromptAI for a response
+2023-11-08 21:47:48,991 INFO PromptAI response status: queued
+2023-11-08 21:47:55,023 INFO Initializing Thread
+2023-11-08 21:47:55,228 INFO CodingAI Thread Initialized with ID: thread_Ym26N2bEFNVFcrRk5qyrmDRP
+2023-11-08 21:47:55,228 INFO Initializing Thread
+2023-11-08 21:47:55,328 INFO PromptAI Thread Initialized with ID: thread_oZMtXo9tqFL5cO8AiHVytphx
+2023-11-08 21:47:55,512 INFO Message: Hello sent to thread thread_oZMtXo9tqFL5cO8AiHVytphx
+2023-11-08 21:47:55,512 INFO Asking PromptAI for a response
+2023-11-08 21:47:55,825 INFO PromptAI response status: queued
+2023-11-08 21:47:56,970 INFO PromptAI response status: in_progress
+2023-11-08 21:47:58,063 INFO PromptAI response status: completed
+2023-11-08 21:47:58,063 INFO Getting newest message from thread
+2023-11-08 21:47:58,232 INFO Newest message from thread retrieved
+2023-11-08 21:47:58,232 INFO Received completed response from CodingAI | >>> Hi there! How can I assist you today? If you have any web design requests or need guidance on creating a website, feel free to let me know what you're looking for.
+2023-11-08 21:47:58,349 INFO Message: How are you? sent to thread thread_oZMtXo9tqFL5cO8AiHVytphx
+2023-11-08 21:47:58,349 INFO Asking PromptAI for a response
+2023-11-08 21:47:58,588 INFO PromptAI response status: queued
+2023-11-08 21:47:59,743 INFO PromptAI response status: in_progress
+2023-11-08 21:48:00,851 INFO PromptAI response status: completed
+2023-11-08 21:48:00,851 INFO Getting newest message from thread
+2023-11-08 21:48:00,958 INFO Newest message from thread retrieved
+2023-11-08 21:48:00,959 INFO Received completed response from CodingAI | >>> I'm just a digital assistant, so I don't have feelings, but I'm here and ready to help you with any questions or tasks you have. How can I assist you with your web design or development needs today?
+2023-11-08 21:48:00,959 INFO Retrieving thread object
+2023-11-08 21:48:01,066 INFO Thread object retrieved
+2023-11-08 21:48:01,175 INFO Message: Give me a fun fact sent to thread thread_oZMtXo9tqFL5cO8AiHVytphx
+2023-11-08 21:48:01,175 INFO Converting thread object to message list
+2023-11-08 21:48:01,273 INFO Thread object converted to message list
+2023-11-08 21:48:20,190 INFO Initializing Thread
+2023-11-08 21:48:20,427 INFO CodingAI Thread Initialized with ID: thread_HXhM6jjWXBxiaj47ZEHurydo
+2023-11-08 21:48:20,427 INFO Initializing Thread
+2023-11-08 21:48:20,526 INFO PromptAI Thread Initialized with ID: thread_fFlTAcbYCHv88BQPH3lIzeTS
+2023-11-08 21:48:20,684 INFO Message: Hello sent to thread thread_fFlTAcbYCHv88BQPH3lIzeTS
+2023-11-08 21:48:20,685 INFO Asking PromptAI for a response
+2023-11-08 21:48:20,980 INFO PromptAI response status: queued
+2023-11-08 21:48:22,141 INFO PromptAI response status: in_progress
+2023-11-08 21:48:23,235 INFO PromptAI response status: completed
+2023-11-08 21:48:23,235 INFO Getting newest message from thread
+2023-11-08 21:48:23,386 INFO Newest message from thread retrieved
+2023-11-08 21:48:23,387 INFO Received completed response from CodingAI | >>> Hi there! How can I assist you today? If you have any web design requests or projects in mind, feel free to let me know, and I'll help translate them into detailed web development tasks.
+2023-11-08 21:48:23,502 INFO Message: How are you? sent to thread thread_fFlTAcbYCHv88BQPH3lIzeTS
+2023-11-08 21:48:23,502 INFO Asking PromptAI for a response
+2023-11-08 21:48:23,755 INFO PromptAI response status: queued
+2023-11-08 21:48:24,895 INFO PromptAI response status: in_progress
+2023-11-08 21:48:25,992 INFO PromptAI response status: completed
+2023-11-08 21:48:25,993 INFO Getting newest message from thread
+2023-11-08 21:48:26,088 INFO Newest message from thread retrieved
+2023-11-08 21:48:26,088 INFO Received completed response from CodingAI | >>> I'm an AI, so I don't have feelings, but I'm here and ready to assist you with anything you need. How can I help you today? If you have a project or question in mind, just let me know!
+2023-11-08 21:48:26,089 INFO Retrieving thread object
+2023-11-08 21:48:26,184 INFO Thread object retrieved
+2023-11-08 21:48:26,316 INFO Message: Give me a fun fact sent to thread thread_fFlTAcbYCHv88BQPH3lIzeTS
+2023-11-08 21:48:26,316 INFO Converting thread object to message list
+2023-11-08 21:48:26,418 INFO Thread object converted to message list

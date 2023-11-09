@@ -69,7 +69,7 @@ def webpageImageRender():
     # Close the browser
     browser.quit()
 
-    return "Image saved successfully! File is 'websiteSaved.png'."
+    return "websiteSaved.png"
 
 def convertImageFileToBase64String():
     with open("websiteSaved.png", "rb") as image_file:

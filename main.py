@@ -84,6 +84,10 @@ def threadMessage(threadID, message="placeholder", action="create"):
         client.beta.threads.messages.create(thread_id=threadID, content=message, role="user")
         logger.info("Message: %s sent to thread %s", message, threadID)
         return "Message sent to thread"
+    elif action == "createvis":
+        client.beta.threads.messages.create(thread_id=threadID, content=message, role="user", visual=True)
+        logger.info("Message: %s sent to thread %s", message, threadID)
+        return "Message sent to thread"
     elif action == "list":
         logger.info("Listing messages from thread")
         messages = client.beta.threads.messages.list(threadID)
@@ -183,36 +187,139 @@ def threadObjectTestRetrevial(threadID):
     logger.info("Retrieving thread object")
     threadObject = client.beta.threads.messages.list(threadID)
     n = 0
-    print(threadObject.data)
     for item in threadObject.data:
-        #print("Thread Object nth: {}: ".format(n) + str(item))
+        print("-------------------------------------------------------------\nThread Object nth: {} | Role {}: ".format(n, item.role) + str(item.content[0].text.value))
         n += 1
     #print("Thread Object: " + str(threadObject.data[0].content[0].text.value))
     
     logger.info("Thread object retrieved")
     return threadObject
 
+def convertThreadToMessageList(threadID):
+    logger.info("Converting thread object to message list")
+    threadObject = client.beta.threads.messages.list(threadID)
+    messageList = [
+        {"role": "system", "content": "You are a helpful assistant."},
+    ]
 
+    """
+    Reference for Vision API
+    content=[
+        {"type": "text", "text": "What’s in this image?"},
+        {
+            "type": "image_url",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg",
+        },
+    ]
+    """
+
+
+
+
+    for item in threadObject.data:
+        role = item.role
+        message = item.content[0].text.value
+        messageList.append({"role": role, "content": message})
+    logger.info("Thread object converted to message list")
+    return messageList
+
+def chatPromptAIVision(threadID, imageBase64=None, comments=None):
+    messageList = convertThreadToMessageList(threadID)
+    functions = [
+        {
+            "name": "revise_website",
+            "description": "You know the original website prompt and request. Call this function if you think that the website that CodingAI created does not meet the original request. Please be specific in your comments about what needs to be changed.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "comments": {
+                        "type": "string",
+                        "description": "Please be specific in your comments about what needs to be changed, act as if you are talking to a web developer.",
+                    },
+                },
+                "required": ["comments"],
+            },
+        }
+    ]
+    if imageBase64 != None and comments != None:
+        messageList.append({"role": "user", "content": [
+                    {
+                        "type": "text", 
+                        "text": comments
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/png;base64,{imageBase64}"
+                        }
+                    }
+                ]
+            }
+        )
+    
+    response = client.chat.completions.create(
+        model="gpt-4-vision-preview",
+        messages=messageList,
+        max_tokens=300,
+        functions=functions,
+    )
+    # Check if a function was called
+    revisedWebsite = False
+    if response.choices[0].function_call:
+        # If a function was called, execute the function and return the result
+        function_name = response.choices[0].function_call.function.name
+        arguments = response.choices[0].function_call.function.arguments
+        if function_name == "revise_website":
+            comments = arguments.get("comments", "")
+            revisedWebsite = True
+    else:
+        comments = response.choices[0].message.content 
+
+    return revisedWebsite, comments
 
 def main():
     logger.info("Starting main function")
     print("Welcome to WedDevGPT!")
 
     userPrompt = "Create a website for Ryan Vogel that is modern with white bold text and a darker background color." #input("What would you like the website to look like? ")
-    threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
-    askPromptAI(promptThreadID)
-    functions.webpageImageRender()
-    
-    
-    
-    # askCodingAI(codingThreadID)
-    # response = codingAIThreadObject(codingThreadID)
-    # messages = client.beta.threads.messages.list(thread_id=codingThreadID)
-    # for message in messages:
-    #     print("Message: " + str(message.content))
-    
+    iteration = 0
+    while iteration < 3:
+        threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
+        # 1. Add the users prompt to the PromptAI thread
+        askPromptAI(promptThreadID)
+        # 2. Ask the PromptAI for a response
+        pictureFilename = functions.webpageImageRender()
+        # 3. Render the webpage, save it as an image, and return the image
+        base64Image = functions.convertImageFileToBase64String(pictureFilename)
+        # 4. Pass the base64 image to the Vision assistant to evaluate if it is sufficient to the original prompt.
+        revisonNeeded, visionResponse = chatPromptAIVision(promptThreadID, base64Image, "I have attached a screenshot of the website that CodingAI created. Does this attached image of the website meet the original users request? If it does not then call the revise function, but if it does then just return with your final remarks (keep them consise).")
+        # 5. If the image is not sufficient, then ask the user for revisions.
+        if revisonNeeded:
+            revisedResponse = "PromptAI: I do not think that the website you created meets the original request. Please revise the website with the following comments: " + visionResponse
+            threadMessage(threadID=codingThreadID, message=revisedResponse, action="create")
+            # 6. Add the users revisions to the PromptAI thread
+            askCodingAI(promptThreadID)
+            # 7. Ask the PromptAI for a response
+            userPrompt = visionResponse
+            # 8. Set the users prompt to the response from PromptAI
+        else:
+            threadMessage(threadID=promptThreadID, message=visionResponse, action="create")
+            # 9. Add the users final remarks to the PromptAI thread
+            break
+
+        # 4. Convert the image to a base64 string
     logger.info("Main function completed")
 
 
 if __name__ == "__main__":
     main()
+    # threadMessage(threadID=promptThreadID, message="Hello", action="create")
+    # askPromptAI(promptThreadID)
+    # threadMessage(threadID=promptThreadID, message="How are you?", action="create")
+    # askPromptAI(promptThreadID)
+    # print("Prompt Thread: " + promptThreadID)
+    # threadObjectTestRetrevial(promptThreadID)
+    # threadMessage(threadID=promptThreadID, message="Give me a fun fact", action="create")
+    # print(chatPromptAIVision(promptThreadID))
+    
+
