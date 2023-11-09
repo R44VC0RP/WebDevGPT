@@ -2963,3 +2963,134 @@ Overall, the website does include the basic structure requested, but the theme a
 2023-11-09 12:41:23,765 INFO Newest message from thread retrieved
 2023-11-09 12:41:23,765 INFO CodingAI response: The website for Ryan Vogel has been successfully created.
 2023-11-09 12:41:23,765 INFO Main function completed
+2023-11-09 13:12:11,704 INFO Initializing Thread
+2023-11-09 13:12:11,952 INFO CodingAI Thread Initialized with ID: thread_6mUS0A3rOhqjP1nl9n3j8S5s
+2023-11-09 13:12:11,952 INFO Initializing Thread
+2023-11-09 13:12:12,041 INFO PromptAI Thread Initialized with ID: thread_ypeFKZ3jOPZP0wVCsFHA9WMO
+2023-11-09 13:12:12,041 INFO Starting main function
+2023-11-09 13:14:05,519 INFO Message: Create a website that has the title of WebDevGPT, it needs to have a User input box where the user can input the prompt of the website deisgn that they want (multiline input) then it need to have a seciton under that where on the left side there are  circle icons with text to the right of them that give updates, the updates might look like "PromptAI: Working on or DevAI: Editing your website. Then on the right side I need a place for a website preview image to be displayed.  sent to thread thread_ypeFKZ3jOPZP0wVCsFHA9WMO
+2023-11-09 13:14:05,519 INFO Asking PromptAI for a response
+2023-11-09 13:14:05,993 INFO PromptAI response status: queued
+2023-11-09 13:14:07,145 INFO PromptAI response status: in_progress
+2023-11-09 13:14:08,254 INFO PromptAI response status: in_progress
+2023-11-09 13:14:09,387 INFO PromptAI response status: in_progress
+2023-11-09 13:14:10,495 INFO PromptAI response status: in_progress
+2023-11-09 13:14:11,599 INFO PromptAI response status: in_progress
+2023-11-09 13:14:12,759 INFO PromptAI response status: in_progress
+2023-11-09 13:14:13,907 INFO PromptAI response status: in_progress
+2023-11-09 13:14:15,031 INFO PromptAI response status: in_progress
+2023-11-09 13:14:16,160 INFO PromptAI response status: in_progress
+2023-11-09 13:14:17,286 INFO PromptAI response status: in_progress
+2023-11-09 13:14:18,405 INFO PromptAI response status: in_progress
+2023-11-09 13:14:19,578 INFO PromptAI response status: requires_action
+2023-11-09 13:14:19,578 INFO PromptAI response requires action
+2023-11-09 13:14:19,578 INFO Tool ID: call_HAJpenya1hb2tkLcodOUqNNC and Run ID: run_ATHDyNUTIbIdS7KTJkwa2KXZ
+2023-11-09 13:14:19,766 INFO Message: PromptAI: Create a webpage titled 'WebDevGPT'. At the top, include a header section anchored to the viewport which contains a centered title 'WebDevGPT'. Below the header, create a main section divided into two columns: the left column and the right column. For the left column, add a multiline input box for users to input their website design prompt. Style this input box with sufficient padding, a border, and make it at least 300px in height. Directly below the input box, place an 'Updates' section. In this section, include vertically stacked rows, each containing a circle icon and a text element to its right signifying different statuses such as 'PromptAI: Working on' and 'DevAI: Editing your website'. Ensure the circle icons are styled uniformly, with a fixed size, border, and a background color that makes them distinguishable. The text elements should align horizontally with the corresponding icons and should be styled for readability. In the right column, reserve space for a preview image of the user's requested website design. This area should have a defined border and should simulate an aspect ratio of a typical monitor screen. Style both columns with padding and borders to distinguish each section’s boundaries. Make the layout responsive, ensuring it adapts gracefully to various screen sizes. Add placeholder content for the updates and website preview sections. sent to thread thread_6mUS0A3rOhqjP1nl9n3j8S5s
+2023-11-09 13:14:19,766 INFO Asking CodingAI for a response
+2023-11-09 13:14:20,205 INFO CodingAI response status: queued
+2023-11-09 13:14:20,876 INFO CodingAI response status: in_progress
+2023-11-09 13:14:21,486 INFO CodingAI response status: in_progress
+2023-11-09 13:14:22,096 INFO CodingAI response status: in_progress
+2023-11-09 13:14:22,719 INFO CodingAI response status: in_progress
+2023-11-09 13:14:23,349 INFO CodingAI response status: in_progress
+2023-11-09 13:14:23,957 INFO CodingAI response status: in_progress
+2023-11-09 13:14:24,573 INFO CodingAI response status: in_progress
+2023-11-09 13:14:25,184 INFO CodingAI response status: in_progress
+2023-11-09 13:14:25,865 INFO CodingAI response status: in_progress
+2023-11-09 13:14:26,488 INFO CodingAI response status: in_progress
+2023-11-09 13:14:27,108 INFO CodingAI response status: in_progress
+2023-11-09 13:14:27,722 INFO CodingAI response status: in_progress
+2023-11-09 13:14:28,323 INFO CodingAI response status: in_progress
+2023-11-09 13:14:29,019 INFO CodingAI response status: in_progress
+2023-11-09 13:14:29,624 INFO CodingAI response status: in_progress
+2023-11-09 13:14:30,235 INFO CodingAI response status: in_progress
+2023-11-09 13:14:30,845 INFO CodingAI response status: in_progress
+2023-11-09 13:14:31,454 INFO CodingAI response status: in_progress
+2023-11-09 13:14:32,059 INFO CodingAI response status: in_progress
+2023-11-09 13:14:32,679 INFO CodingAI response status: in_progress
+2023-11-09 13:14:33,293 INFO CodingAI response status: in_progress
+2023-11-09 13:14:33,901 INFO CodingAI response status: in_progress
+2023-11-09 13:14:34,514 INFO CodingAI response status: in_progress
+2023-11-09 13:14:35,123 INFO CodingAI response status: in_progress
+2023-11-09 13:14:35,828 INFO CodingAI response status: in_progress
+2023-11-09 13:14:36,450 INFO CodingAI response status: in_progress
+2023-11-09 13:14:38,535 INFO CodingAI response status: in_progress
+2023-11-09 13:14:39,147 INFO CodingAI response status: in_progress
+2023-11-09 13:14:39,744 INFO CodingAI response status: in_progress
+2023-11-09 13:14:40,356 INFO CodingAI response status: in_progress
+2023-11-09 13:14:40,955 INFO CodingAI response status: requires_action
+2023-11-09 13:14:40,955 INFO Tool ID: call_U4aPjPowdOjJUdfS9ZTQUBXc and Run ID: run_dcpYjPzZ9vubFkEv4Hcm6ma9
+2023-11-09 13:14:40,960 INFO Website creation response: Website created successfully!, files are in the website folder, (index.html, style.css, script.js) 
+2023-11-09 13:14:41,852 INFO CodingAI response status: in_progress
+2023-11-09 13:14:42,453 INFO CodingAI response status: in_progress
+2023-11-09 13:14:43,055 INFO CodingAI response status: in_progress
+2023-11-09 13:14:43,689 INFO CodingAI response status: in_progress
+2023-11-09 13:14:44,301 INFO CodingAI response status: in_progress
+2023-11-09 13:14:44,915 INFO CodingAI response status: completed
+2023-11-09 13:14:44,915 INFO Getting newest message from thread
+2023-11-09 13:14:45,077 INFO Newest message from thread retrieved
+2023-11-09 13:14:45,078 INFO CodingAI response: The custom website you requested, titled 'WebDevGPT', has been successfully created. It features a fixed header with the centered title 'WebDevGPT', a main section split into two columns with a multiline input box, an 'Updates' section, and a simulated website preview space. Responsive design considerations have been applied for various screen sizes.
+2023-11-09 13:14:45,357 INFO PromptAI response action submitted
+2023-11-09 13:14:46,465 INFO PromptAI response status: in_progress
+2023-11-09 13:14:47,576 INFO PromptAI response status: in_progress
+2023-11-09 13:14:48,720 INFO PromptAI response status: in_progress
+2023-11-09 13:14:49,831 INFO PromptAI response status: completed
+2023-11-09 13:14:49,831 INFO Getting newest message from thread
+2023-11-09 13:14:50,000 INFO Newest message from thread retrieved
+2023-11-09 13:14:50,000 INFO Received completed response from CodingAI | >>> The website 'WebDevGPT' has been created as per your specifications. It includes:
+
+- A fixed header with the title 'WebDevGPT'.
+- A main section divided into two columns.
+- A multiline input box for users to input their website design prompts.
+- An 'Updates' section with circle icons and text for status updates.
+- A placeholder space for website preview images, styled to mimic a monitor screen.
+
+The design is responsive to accommodate different devices. If you need further modifications or additions, please let me know!
+2023-11-09 13:14:55,486 INFO Converting thread object to message list
+2023-11-09 13:14:55,657 INFO Thread object converted to message list
+2023-11-09 13:15:04,193 INFO Message: I do not think that the website you created meets the original request. Please revise the website with the following comments: The title 'WebDevGPT' seems incomplete, it should be fully displayed. The multiline input box for the user's prompt is missing. Please address these issues to meet the original request. sent to thread thread_6mUS0A3rOhqjP1nl9n3j8S5s
+2023-11-09 13:15:04,193 INFO Asking CodingAI for a response
+2023-11-09 13:15:04,481 INFO CodingAI response status: queued
+2023-11-09 13:15:05,140 INFO CodingAI response status: in_progress
+2023-11-09 13:15:05,753 INFO CodingAI response status: in_progress
+2023-11-09 13:15:06,367 INFO CodingAI response status: in_progress
+2023-11-09 13:15:06,976 INFO CodingAI response status: in_progress
+2023-11-09 13:15:07,586 INFO CodingAI response status: in_progress
+2023-11-09 13:15:08,201 INFO CodingAI response status: in_progress
+2023-11-09 13:15:08,821 INFO CodingAI response status: in_progress
+2023-11-09 13:15:09,425 INFO CodingAI response status: in_progress
+2023-11-09 13:15:10,043 INFO CodingAI response status: in_progress
+2023-11-09 13:15:10,643 INFO CodingAI response status: in_progress
+2023-11-09 13:15:11,254 INFO CodingAI response status: in_progress
+2023-11-09 13:15:11,854 INFO CodingAI response status: in_progress
+2023-11-09 13:15:12,453 INFO CodingAI response status: in_progress
+2023-11-09 13:15:13,152 INFO CodingAI response status: in_progress
+2023-11-09 13:15:13,835 INFO CodingAI response status: in_progress
+2023-11-09 13:15:14,428 INFO CodingAI response status: in_progress
+2023-11-09 13:15:15,050 INFO CodingAI response status: in_progress
+2023-11-09 13:15:15,646 INFO CodingAI response status: in_progress
+2023-11-09 13:15:16,262 INFO CodingAI response status: in_progress
+2023-11-09 13:15:16,870 INFO CodingAI response status: in_progress
+2023-11-09 13:15:17,483 INFO CodingAI response status: in_progress
+2023-11-09 13:15:18,088 INFO CodingAI response status: in_progress
+2023-11-09 13:15:18,680 INFO CodingAI response status: in_progress
+2023-11-09 13:15:19,282 INFO CodingAI response status: in_progress
+2023-11-09 13:15:19,890 INFO CodingAI response status: in_progress
+2023-11-09 13:15:20,523 INFO CodingAI response status: in_progress
+2023-11-09 13:15:21,133 INFO CodingAI response status: in_progress
+2023-11-09 13:15:21,739 INFO CodingAI response status: requires_action
+2023-11-09 13:15:21,739 INFO Tool ID: call_6oi4fXmoloQKgJEbW1tGvMu8 and Run ID: run_Kv7TcJCiPhV6zUYZtRDDKvL1
+2023-11-09 13:15:21,739 INFO Website creation response: Website created successfully!, files are in the website folder, (index.html, style.css, script.js) 
+2023-11-09 13:15:22,668 INFO CodingAI response status: in_progress
+2023-11-09 13:15:23,279 INFO CodingAI response status: in_progress
+2023-11-09 13:15:23,883 INFO CodingAI response status: in_progress
+2023-11-09 13:15:24,483 INFO CodingAI response status: in_progress
+2023-11-09 13:15:25,087 INFO CodingAI response status: in_progress
+2023-11-09 13:15:25,695 INFO CodingAI response status: completed
+2023-11-09 13:15:25,695 INFO Getting newest message from thread
+2023-11-09 13:15:25,809 INFO Newest message from thread retrieved
+2023-11-09 13:15:25,809 INFO CodingAI response: The website 'WebDevGPT' has been successfully created with the specified features. It includes a fixed header with the title, a responsive layout with a multi-line input box for website prompts, an 'Updates' section with circle icons and status texts, and a right column reserved for the website preview image. If any further adjustments or additional functionality are needed, please let me know how I can assist you.
+2023-11-09 13:15:30,736 INFO Converting thread object to message list
+2023-11-09 13:15:30,862 INFO Thread object converted to message list
+2023-11-09 13:15:33,922 INFO Message: The attached image meets the original user's request by including a title of WebDevGPT, a multiline input box for website design prompts, an 'Updates' section with circle icons and status texts, and a placeholder on the right side for a website preview image. sent to thread thread_ypeFKZ3jOPZP0wVCsFHA9WMO
+2023-11-09 13:15:33,922 INFO Main function completed
