@@ -37,17 +37,7 @@ This was a non-altered fully functioning test run. Here is the website that it g
 ### Thoughts:
 Overall, it works, but I still need to optimize it and make it more reliable. It also uses a decent amount of tokens. This can be fixed with prompt optemizaiton and token counting.
 
-## Getting Started
 
-To get started with `WebDevGPT`, please follow the instructions below:
+## Contributions
 
-1. Clone the repository to your local machine.
-2. Install the required dependencies.
-3. Set up your OpenAI API keys in the configuration file.
-4. Run the PromptAI module to input your website requirements.
-5. Follow the on-screen instructions to guide you through the development process.
-
-## Contribution
-![websiteSaved](https://github.com/R44VC0RP/WebDevGPT/assets/89211796/5aa32859-4aab-4a5c-bd23-5907275dbf95)
-
-Contributions to `WebDevGPT` are welcome. Please read
+Contributions to `WebDevGPT` are welcome. You can support the project by donating at https://www.buymeacoffee.com/exonenterprise. You can also contribute by submitting a pull request or opening an issue. Any support or suggestions are GREATLY appreciated.

@@ -2,3 +2,8 @@ webdevgpt/
 __pycache__/
 venv/
 keys.env
+.gitignore
+.DS_Store
+website/
+images/
+webdevgpt.log
