@@ -13,6 +13,7 @@ handler.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
+logger.propagate = False
  
 # Set up OpenAI API
 client = openai.OpenAI()
@@ -21,9 +22,6 @@ client = openai.OpenAI()
 # Set up OpenAI API - assistant IDs
 coding_ai_id_35 = "asst_OO9fuCFGsDtmPhEWJ0Ihz7Zy"
 prompt_ai_id_35 = "asst_B6yomAvgVF4dbtxJhYXp9Ok6"
-
-prompt_ai_id_4 = "asst_iEBeGcs4FNywyhkdk8SJKiIP"
-coding_ai_id_4 = "asst_0vmT1XOEp7PV3s8theanh3PZ"
 
 prompt_ai = prompt_ai_id_35
 coding_ai = coding_ai_id_35
@@ -60,6 +58,7 @@ def functionCalling(run_object):
         
         # Based on the function name, decide which Python function to call. Add more elif branches as you add more functions.
         if function_name == "create_website":
+            functions.communications("Function", "create_website running.", "auto")
             arguments = json.loads(arguments)
             html_code = arguments.get("html_code", "")
             css_code = arguments.get("css_code", "")
@@ -71,11 +70,12 @@ def functionCalling(run_object):
             return result # return the result to the calling function.
 
         if function_name == "start_coder":
+            functions.communications("Function", "start_coder running.", "auto")
             arguments = json.loads(arguments)
             message = arguments.get("message", "")
             modifedMessage = "PromptAI: " + message
             threadMessage(codingThreadID, modifedMessage)
-            print("PromptAI: <A> Asking CodingAI to create the 1st draft.")
+            functions.communications("CodingAI", "Asking CodingAI to create a draft.", "auto")
             message = askCodingAI(codingThreadID) # CodingAI response is returned as a string.
             return message
 
@@ -86,6 +86,10 @@ def threadMessage(threadID, message="placeholder", action="create"):
         return "Message sent to thread"
     elif action == "createvis":
         client.beta.threads.messages.create(thread_id=threadID, content=message, role="user", visual=True)
+        logger.info("Message: %s sent to thread %s", message, threadID)
+        return "Message sent to thread"
+    elif action == "createassist":
+        client.beta.threads.messages.create(thread_id=threadID, content=message, role="assistant")
         logger.info("Message: %s sent to thread %s", message, threadID)
         return "Message sent to thread"
     elif action == "list":
@@ -111,12 +115,12 @@ def askCodingAI(threadID):
         if run.status == 'completed':
             # 4. Get the final message response from the run.
             codingAIresponse = threadMessage(threadID=threadID, action="newest") # This gets the newest message from the thread.
-            print("CodingAI: " + codingAIresponse)
+            functions.communications("CodingAI", codingAIresponse, "comm")
             logger.info("CodingAI response: " + codingAIresponse)
             return codingAIresponse
         if run.status == 'requires_action':
-            print("CodingAI: <A> Creating the website.")
-            logger.info("CodingAI response requires action")
+            functions.communications("CodingAI", "Generating the website.", "auto")
+            logging.info("CodingAI response requires action")
             # 3. The CodingAI assistant has a required action. In this case, it is a tool call.
             runId = run.id
             toolId = run.required_action.submit_tool_outputs.tool_calls[0].id
@@ -135,6 +139,7 @@ def askCodingAI(threadID):
                     }
                 ]
             )
+            logging.info("CodingAI response action submitted")
             time.sleep(.5)  # wait for 1 second before checking the status again
             run = client.beta.threads.runs.retrieve(run_id=run.id, thread_id=threadID)
         else:
@@ -152,7 +157,7 @@ def askPromptAI(threadID):
             # 3. The PromptAI assistant has completed and returned a response.
             # 4. Get the final message response from the run.
             promptAIresponse = threadMessage(threadID=threadID, action="newest")
-            print("PromptAI: " + promptAIresponse)
+            functions.communications("PromptAI", promptAIresponse, "comm")
             logger.info("Received completed response from CodingAI | >>> " + promptAIresponse)
             break
         if run.status == 'requires_action':
@@ -195,11 +200,11 @@ def threadObjectTestRetrevial(threadID):
     logger.info("Thread object retrieved")
     return threadObject
 
-def convertThreadToMessageList(threadID):
+def convertThreadToMessageList(threadID, systemMessage="You are a helpful assistant."):
     logger.info("Converting thread object to message list")
     threadObject = client.beta.threads.messages.list(threadID)
     messageList = [
-        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "system", "content": systemMessage}
     ]
 
     """
@@ -212,10 +217,6 @@ def convertThreadToMessageList(threadID):
         },
     ]
     """
-
-
-
-
     for item in threadObject.data:
         role = item.role
         message = item.content[0].text.value
@@ -224,23 +225,7 @@ def convertThreadToMessageList(threadID):
     return messageList
 
 def chatPromptAIVision(threadID, imageBase64=None, comments=None):
-    messageList = convertThreadToMessageList(threadID)
-    functions = [
-        {
-            "name": "revise_website",
-            "description": "You know the original website prompt and request. Call this function if you think that the website that CodingAI created does not meet the original request. Please be specific in your comments about what needs to be changed.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "comments": {
-                        "type": "string",
-                        "description": "Please be specific in your comments about what needs to be changed, act as if you are talking to a web developer.",
-                    },
-                },
-                "required": ["comments"],
-            },
-        }
-    ]
+    messageList = convertThreadToMessageList(threadID, "You know the original website prompt and request. If you think that the website that CodingAI created does not meet your original request, then format your response like this: REVISE|<comments>. If you think that the website that CodingAI created does meet your original request, then format your response like this: NOREVISE|<comments>. You MUST respond with either REVISE or NOREVISE.")
     if imageBase64 != None and comments != None:
         messageList.append({"role": "user", "content": [
                     {
@@ -261,33 +246,35 @@ def chatPromptAIVision(threadID, imageBase64=None, comments=None):
         model="gpt-4-vision-preview",
         messages=messageList,
         max_tokens=300,
-        functions=functions,
+        
     )
     # Check if a function was called
     revisedWebsite = False
-    if response.choices[0].function_call:
-        # If a function was called, execute the function and return the result
-        function_name = response.choices[0].function_call.function.name
-        arguments = response.choices[0].function_call.function.arguments
-        if function_name == "revise_website":
-            comments = arguments.get("comments", "")
-            revisedWebsite = True
+    visionResponse = response.choices[0].message.content
+    if visionResponse.startswith("REVISE"):
+        # If a function was called, execute the function and return the result    
+        comments = visionResponse.split("|")[1]
+        revisedWebsite = True            
+        functions.communications("PromptAI", "Asking CodingAI to revise the website. PromptAI did not find the website satisfactory.", "auto")
     else:
-        comments = response.choices[0].message.content 
+        comments = visionResponse.split("|")[1]
+        functions.communications("PromptAI", comments, "comm")
 
     return revisedWebsite, comments
 
 def main():
     logger.info("Starting main function")
-    print("Welcome to WedDevGPT!")
+    functions.communications("PromptAI", "Hello, I am PromptAI. I am here to help you create a website.", "auto")
 
-    userPrompt = "Create a website for Ryan Vogel that is modern with white bold text and a darker background color." #input("What would you like the website to look like? ")
+    # userPrompt = "Create a website for Ryan Vogel that is modern with white bold text and a darker background color." #input("What would you like the website to look like? ")
+    userPrompt = input("Describe in detail what you would like the website to function with and do.\nUser: ")
     iteration = 0
+    threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
+    # 1. Add the users prompt to the PromptAI thread
+    askPromptAI(promptThreadID)
+    # 2. Ask the PromptAI for a response
     while iteration < 3:
-        threadMessage(threadID=promptThreadID, message=userPrompt, action="create")
-        # 1. Add the users prompt to the PromptAI thread
-        askPromptAI(promptThreadID)
-        # 2. Ask the PromptAI for a response
+        functions.communications("PromptAI", "Asking PromptAI to check the work of CodingAI, this is draft {}.".format(iteration + 1), "auto")
         pictureFilename = functions.webpageImageRender()
         # 3. Render the webpage, save it as an image, and return the image
         base64Image = functions.convertImageFileToBase64String(pictureFilename)
@@ -295,16 +282,13 @@ def main():
         revisonNeeded, visionResponse = chatPromptAIVision(promptThreadID, base64Image, "I have attached a screenshot of the website that CodingAI created. Does this attached image of the website meet the original users request? If it does not then call the revise function, but if it does then just return with your final remarks (keep them consise).")
         # 5. If the image is not sufficient, then ask the user for revisions.
         if revisonNeeded:
-            revisedResponse = "PromptAI: I do not think that the website you created meets the original request. Please revise the website with the following comments: " + visionResponse
+            revisedResponse = "I do not think that the website you created meets the original request. Please revise the website with the following comments: " + visionResponse
             threadMessage(threadID=codingThreadID, message=revisedResponse, action="create")
             # 6. Add the users revisions to the PromptAI thread
-            askCodingAI(promptThreadID)
-            # 7. Ask the PromptAI for a response
-            userPrompt = visionResponse
-            # 8. Set the users prompt to the response from PromptAI
+            codingAIResponse = askCodingAI(promptThreadID)
+            iteration += 1
         else:
-            threadMessage(threadID=promptThreadID, message=visionResponse, action="create")
-            # 9. Add the users final remarks to the PromptAI thread
+            threadMessage(threadID=promptThreadID, message=visionResponse, action="create")            
             break
 
         # 4. Convert the image to a base64 string

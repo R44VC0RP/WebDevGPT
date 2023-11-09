@@ -4,6 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import base64
 import time
+from colorama import Fore, Style
+
 
 
 
@@ -58,7 +60,7 @@ def webpageImageRender():
     browser.execute_script("window.scrollTo(0, document.body.parentNode.scrollHeight)")
 
     # Give the page some time to load any lazy-loaded elements
-    time.sleep(2)  # waits for 2 seconds
+    time.sleep(1)  # waits for 2 seconds
 
     # Change the size of the window to the full height of the page
     browser.set_window_size(1200, total_height)  # Width is set to 1200px, or whatever is required
@@ -71,7 +73,23 @@ def webpageImageRender():
 
     return "websiteSaved.png"
 
-def convertImageFileToBase64String():
-    with open("websiteSaved.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-        return encoded_string
+def convertImageFileToBase64String(pictureFilename):
+    with open(pictureFilename, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
+    
+def communications(agent, message, autoOrcomms):
+    if autoOrcomms == "auto":
+        if agent == "PromptAI":
+            print(Fore.RED + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLACK_EX + f" {message}" + Style.RESET_ALL)
+        elif agent == "CodingAI":
+            print(Fore.GREEN + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLACK_EX + f" {message}" + Style.RESET_ALL)
+        elif agent == "Function":
+            print(Fore.YELLOW + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLACK_EX + f" {message}" + Style.RESET_ALL)
+    
+    else:
+        if agent == "PromptAI":
+            print(Fore.RED + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLUE_EX + f" {message}" + Style.RESET_ALL)
+        elif agent == "CodingAI":
+            print(Fore.GREEN + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLUE_EX + f" {message}" + Style.RESET_ALL)
+        elif agent == "Function":
+            print(Fore.YELLOW + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLUE_EX + f" {message}" + Style.RESET_ALL)
