@@ -19,6 +19,7 @@ def webpreview(filename):
 
 
 def updateWebClient(assistant, message):
+    print('Updating web client with message: ' + message)
     socketio.emit('update_status', {'assistant': assistant, 'message': message})
 
 @socketio.on('connect')

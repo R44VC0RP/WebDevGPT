@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const message = textArea.value;
     sendPrompt(message);
     textArea.readOnly = true; // Lock the textarea
+    // make the textArea grey
+    textArea.style.backgroundColor = "#e9ecef";
+    button.disabled = true; // Disable the button
+
   }
 
   // Event listener for button click
