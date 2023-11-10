@@ -1,12 +1,10 @@
 import os
-import app
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import base64
 import time
 from colorama import Fore, Style
-import random
 
 
 
@@ -66,27 +64,20 @@ def webpageImageRender():
 
     # Change the size of the window to the full height of the page
     browser.set_window_size(1200, total_height)  # Width is set to 1200px, or whatever is required
-    randomNum = random.randint(0, 4000)
-    websitePath = f"webpreview/websiteSaved{randomNum}.png"
 
     # Take a screenshot of the entire page
-    browser.save_screenshot(websitePath)
-
+    browser.save_screenshot('websiteSaved.png')
 
     # Close the browser
     browser.quit()
 
-    return websitePath
+    return "websiteSaved.png"
 
 def convertImageFileToBase64String(pictureFilename):
     with open(pictureFilename, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
     
 def communications(agent, message, autoOrcomms):
-    if agent == "WEBPIC":
-        app.updateWebClient(agent, message)
-    else:
-        app.updateWebClient(agent, message)
     if autoOrcomms == "auto":
         if agent == "PromptAI":
             print(Fore.RED + f"{agent}: <A>" + Style.RESET_ALL + Fore.LIGHTBLACK_EX + f" {message}" + Style.RESET_ALL)

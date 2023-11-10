@@ -2,3 +2,4 @@ openai
 selenium
 webdriver_manager
 colorama
+flask_socketio

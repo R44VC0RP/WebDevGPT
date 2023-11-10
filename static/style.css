@@ -1,0 +1,342 @@
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch-kursiv.1052965d.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig.204b461c.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 500;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig-kursiv.a0040f3f.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett.977f1845.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 600;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett-kursiv.cb37a814.woff2) format("woff2")
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+
+body {
+    background-image: linear-gradient(180deg, #2f6ed3 5%, #5095e4 20%, #5095e4 60%, #2f6ed3 95%);
+    height: 100vh;
+    margin: 0;
+    font-family: SÃ¶hne, Arial, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.webPrompt {
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+
+}
+
+
+.generateButton {
+    margin-left: 7px;
+    height: 75px;
+    background-color: #3c6e71;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.generateButton:active {
+    /* Scale down the button */
+    transform: scale(0.95);
+    /* Optional: Add a box-shadow for a "pressed" effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.horizontal-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.horizontal-align img {
+    margin-bottom: -3px;
+    width: 12px;
+    height: 12px;
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(39, 39, 42, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    /* border-radius: 10px; */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    /* border-radius: 0 0 20px 20px; */
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding-top: 100px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.input-section-div textarea {
+    width: 95%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+
+section {
+    /* background-color: #FFF5D6; */
+    background: rgba(63, 63, 70, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+}
+
+.updates-section {
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.input-section {
+    width: 50vw;
+    margin-top: 30px;
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    
+
+}
+
+.preview-section {
+    width: 50vw;
+    margin-top: 30px;
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.preview-section img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.update {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.update p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 200;
+    width: 80%;
+    overflow-wrap: break-word;
+}
+
+.circle-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    background: #888;
+    margin-right: 8px;
+}
+
+.circle-icon-red {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(215, 0, 21);
+    border-radius: 50%;
+    background: rgb(255, 59, 48);
+    margin-right: 8px;
+}
+
+.circle-icon-blue {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0, 64, 221);
+    border-radius: 50%;
+    background: rgb(0, 122, 255);
+    margin-right: 8px;
+}
+
+.circle-icon-green {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(36, 138, 61);
+    border-radius: 50%;
+    background: rgb(52, 199, 89);
+    margin-right: 8px;
+}
+
+.circle-icon-purple {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(137, 68, 171);
+    border-radius: 50%;
+    background: rgb(175, 82, 222);
+    margin-right: 8px;
+}
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+.promptai {
+    color: #fff;
+    font-weight: 600;
+}
