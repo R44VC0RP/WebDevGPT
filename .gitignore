@@ -2,3 +2,5 @@
 webdevgpt/
 website/
 __pycache__/
+flask/.DS_Store
+.DS_Store
